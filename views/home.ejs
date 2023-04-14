@@ -1,0 +1,13 @@
+<%-include("partials/header");-%>
+    <h1>HOME</h1>
+    <p>
+        <%=p1%>
+    </p>
+    
+  <% compose_arr.forEach(function(element){ %>
+   <h2>
+    <%=element.title%></h2>
+    <p><%=element.post.substr(0,20)+"..."%><a href="/posts/<%=element.title%>">read more</a></p>
+    <% }); %>
+    <%-include("partials/footer")-%>
+    
